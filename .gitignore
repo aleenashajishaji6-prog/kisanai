@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pkl
+*.pyc
+ml/crop_model.pkl
+ml/crop_scaler.pkl
+ml/crop_encoder.pkl
