@@ -4,10 +4,18 @@ from routers import auth, crop, disease, schemes
 
 app = FastAPI(title="KisanAI API", version="1.0.0")
 
+origins = [
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://127.0.0.1:5500",
+    "https://reliable-clafoutis-a11d59.netlify.app",
+    "*"
+]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
