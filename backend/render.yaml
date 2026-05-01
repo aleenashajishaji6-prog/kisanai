@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kisanai-backend
+    runtime: python
+    buildCommand: pip install fastapi uvicorn motor pymongo python-jose passlib python-multipart scikit-learn numpy pillow python-dotenv
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONGO_URL
+        value: mongodb+srv://aleenashajishaji6_db_user:l9z4crILHtXwQaw8@cluster0.4ll24tv.mongodb.net/
+      - key: SECRET_KEY
+        value: kisanai-secret-key-2024
